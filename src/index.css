@@ -1,0 +1,70 @@
+:root {
+  --hk-yellow: #f8e71c;
+  --hk-yellow-dark: #c2b306;
+  --hk-black: #1E1C27;
+  --hk-dark: #212326;
+  --hk-card: #2a2830;
+  --hk-surface: #252330;
+  --hk-input-bg: #2e2c38;
+  --hk-border: rgba(248, 231, 28, 0.15);
+  --hk-border-strong: rgba(248, 231, 28, 0.30);
+  --hk-text: #f0ece4;
+  --hk-muted: #a09a8a;
+  --hk-red: #e24b4a;
+  --hk-green: #1D9E75;
+  --hk-amber: #e67e22;
+  --hk-blue: #3498db;
+  --hk-purple: #9b59b6;
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body, #root {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 15px;
+  color: var(--hk-text);
+  background: var(--hk-black);
+  -webkit-font-smoothing: antialiased;
+}
+
+input, select, textarea, button {
+  font-family: inherit;
+  font-size: 14px;
+}
+
+input[type=text], input[type=number], input[type=time], input[type=date], select, textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 0.5px solid var(--hk-border-strong);
+  border-radius: 8px;
+  background: var(--hk-input-bg);
+  color: var(--hk-text);
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: 1.5px solid var(--hk-yellow);
+  border-color: var(--hk-yellow);
+}
+
+textarea { resize: vertical; min-height: 60px; }
+
+input[type=range] { accent-color: var(--hk-yellow); width: 100%; }
+
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--hk-border-strong); border-radius: 2px; }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  margin: -1px; padding: 0; border: 0;
+  overflow: hidden; clip: rect(0,0,0,0);
+}
